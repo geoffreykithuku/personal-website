@@ -20,7 +20,7 @@ const Navbar = () => {
   window.addEventListener("resize", checkWindowSize);
 
   return (
-    <nav className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px] ">
+    <nav className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px] " style={{ fontFamily: 'Poppins Sans' }}>
       <h1 className="text-[32px] font-bold mr-2 md:mr-10">
         Geoff<span className="text-[#ff2e63]">rey.</span>
       </h1>
@@ -35,7 +35,7 @@ const Navbar = () => {
         <ul
           className={`${
             isMobileMenuOpen
-              ? "flex flex-col justify-center items-center absolute  w-full mx-auto gap-3"
+              ? "flex flex-col justify-center items-center absolute  w-full mx-auto gap-3 bg-white"
               : "hidden md:flex  gap-4 lg:gap-10 text-xl  md:justify-end items-center ml-auto w-full"
           } `}
         >
