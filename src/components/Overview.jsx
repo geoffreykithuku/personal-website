@@ -2,7 +2,7 @@ import React from "react";
 import { Plus } from "lucide-react";
 const Overview = () => {
   return (
-    <div className="flex justify-center items-center my-[55px] overview">
+    <div className="flex justify-center items-center my-[60px] overview">
       <div className="grid grid-cols-1 sm:grid-cols-3 mx-auto w-full gap-5 ">
         <div className="flex flex-col justify-center items-center shadow pb-5  ">
           <span className="flex text-[48px] font-semibold text-[#ff2e63] justify-center items-center ">
