@@ -13,14 +13,18 @@ font-family: 'Work Sans', sans-serif !important
 font-family: 'Poppins', sans-serif !important
 }
 
-.about{
+.about, .card{
   font-family: 'Poppins', sans-serif !important
 }
 .about .about__title{
 font-family: 'Lato', sans-serif !important
 }
-.skills{
+.skills, .projects{
   font-family: 'Lato', sans-serif !important
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* font-family: 'Inter', sans-serif;
