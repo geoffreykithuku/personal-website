@@ -2,26 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-nav {
-  font-family: "Poppins", sans-serif !important;
-}
+
 
 .home{
 font-family: 'Work Sans', sans-serif !important
 }
-.overview{
+
+.overview, .contact, .about, .card, nav{
 font-family: 'Poppins', sans-serif !important
 }
 
-.about, .card{
-  font-family: 'Poppins', sans-serif !important
-}
-.about .about__title{
+
+.about h1, .skills, .projects, .contact-title{
 font-family: 'Lato', sans-serif !important
 }
-.skills, .projects{
-  font-family: 'Lato', sans-serif !important
-}
+
 
 html {
   scroll-behavior: smooth;

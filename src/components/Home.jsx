@@ -15,10 +15,16 @@ const Home = () => {
         <h2 className="flex-nowrap text-[#ff2e63] md:text-[40px] flex">
           Software Developer.
         </h2>
-        <button className="bg-[#ff2e63] text-white px-5 py-2 rounded-[50px] mt-8 text-[22px] font-[400] flex items-center gap-4">
-          <p>Download CV</p>
-          <ArrowDownToLine size={20} color="#fff" />
-        </button>
+        <a
+          href="https://drive.google.com/uc?export=download&id=133XfxszAW7dFfirsSlYoYweMiXUyNMnm"
+          className="bg-[#ff2e63] text-white px-5 py-2 rounded-[50px] mt-8 text-[22px] font-[400] flex items-center gap-4"
+          download
+        >
+          <span className="flex items-center ">
+            <p>Download CV</p>
+            <ArrowDownToLine size={20} color="#fff" />
+          </span>
+        </a>
       </div>
 
       <div className="w-full max-w-[450px] max-h-[450px] h-full flex items-center justify-center">
@@ -29,5 +35,3 @@ const Home = () => {
 };
 
 export default Home;
-
-

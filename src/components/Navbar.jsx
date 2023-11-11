@@ -38,7 +38,7 @@ const Navbar = () => {
         <ul
           className={`${
             isMobileMenuOpen
-              ? "flex flex-col justify-center items-center absolute  w-full mx-auto gap-3 bg-white"
+              ? "flex flex-col justify-center items-center absolute  w-full mx-auto gap-3 bg-white pb-5"
               : "hidden md:flex  gap-4 lg:gap-10 text-xl  md:justify-end items-center ml-auto w-full"
           } `}
         >
