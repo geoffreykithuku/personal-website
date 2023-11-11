@@ -18,58 +18,59 @@ import Typescript from '../assets/TypeScript.svg'
 
 
 const Skills = () => {
+
   return (
     <div className="my-20 skills">
       <h1 className="text-[45px] text-[#2c3333] font-bold text-center md:text-left">
         Tools & Technologies <span className="text-[#ff2e63]">I Work With</span>
       </h1>
       <div className="w-full grid gap-6 grid-cols-4 sm:grid-cols-6 md:grid-cols-8 mt-10">
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Express} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Git} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Html} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Mongo} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Node} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={ReactImg} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Js} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Rails} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Ruby} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Tailwind} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Python} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Nextjs} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Github} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Bootstrap} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Django} alt="" className="w-full" />
         </div>
-        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto">
+        <div className="shadow max-w-[60px] w-full flex justify-center items-center max-h-[60px] p-2 mx-auto hover:translate-y-[-5px] duration-300">
           <img src={Typescript} alt="" className="w-full" />
         </div>
       </div>

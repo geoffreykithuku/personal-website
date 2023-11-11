@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div
-      className="rounded-[20px] w-full max-w-[350px]  border mx-auto card"
+      className="rounded-[20px] w-full max-w-[350px]  border mx-auto card hover:translate-y-[-8px] duration-300"
       style={{
         boxShadow: "2px 2px 20px 4px rgba(0, 0, 0, 0.20)",
       }}

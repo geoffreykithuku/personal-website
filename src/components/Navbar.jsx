@@ -20,7 +20,10 @@ const Navbar = () => {
   window.addEventListener("resize", checkWindowSize);
 
   return (
-    <nav className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px] " style={{ fontFamily: 'Poppins Sans' }}>
+    <nav
+      className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px] "
+      style={{ fontFamily: "Poppins Sans" }}
+    >
       <h1 className="text-[32px] font-bold mr-2 md:mr-10">
         Geoff<span className="text-[#ff2e63]">rey.</span>
       </h1>
@@ -46,7 +49,13 @@ const Navbar = () => {
           <li className="">Contact</li>
 
           <li className="bg-[#ff2e63] text-white px-4 py-2 rounded-full">
-            Resume
+            <a
+              href="https://drive.google.com/file/d/133XfxszAW7dFfirsSlYoYweMiXUyNMnm/view?usp=drive_link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
           </li>
         </ul>
       </div>
