@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <div className="w-full my-[100px] projects mx-auto ">
+    <div className="w-full my-[100px] projects mx-auto " id="projects">
       <h1 className="text-[45px] font-bold text-[#2c3333]">
         Check Out <br />
         <span className="text-[#ff2e63]">My Work</span>

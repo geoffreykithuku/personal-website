@@ -2,7 +2,7 @@ import React from 'react'
 import AboutImg from '../assets/About.svg'
 const About = () => {
   return (
-    <div className="my-[60px] flex items-center justify-center w-full about">
+    <div id='about' className="my-[60px] flex items-center justify-center w-full about">
       <div className="w-full flex flex-col items-center gap-8 md:flex-row md:justify-between">
         <div className="w-full text-center md:text-left gap-6 flex flex-col">
           <span className="text-[36px] md:text-[45px] font-bold">

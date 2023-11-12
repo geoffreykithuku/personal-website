@@ -3,7 +3,7 @@ import Form from "./Form";
 
 const Contact = () => {
   return (
-    <div className="my-20 w-full contact">
+    <div id="contact" className="my-20 w-full contact">
       <div className="flex flex-col md:flex-row ">
         <div className="gap-8 md:gap-10 flex flex-col w-full">
           <h1 className="contact-title text-[45px] font-bold text-[#2c3333] text-center md:text-left">

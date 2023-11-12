@@ -20,7 +20,7 @@ import Typescript from '../assets/TypeScript.svg'
 const Skills = () => {
 
   return (
-    <div className="my-20 skills">
+    <div className="my-20 skills" id='skills'>
       <h1 className="text-[45px] text-[#2c3333] font-bold text-center md:text-left">
         Tools & Technologies <span className="text-[#ff2e63]">I Work With</span>
       </h1>

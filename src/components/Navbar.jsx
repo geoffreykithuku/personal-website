@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px] "
+      className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px]  px-5 sm:px-10 lg:px-[100px] py-5"
       style={{ fontFamily: "Poppins Sans" }}
     >
       <h1 className="text-[32px] font-bold mr-2 md:mr-10">
@@ -42,11 +42,22 @@ const Navbar = () => {
               : "hidden md:flex  gap-4 lg:gap-10 text-xl  md:justify-end items-center ml-auto w-full"
           } `}
         >
-          <li>Home</li>
-          <li>Skills</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li className="">Contact</li>
+          <li className="hover:text-[#ff2e63] duration-300 ">
+            <a href="#home">Home</a>
+          </li>
+
+          <li className="hover:text-[#ff2e63] duration-300 ">
+            <a href="#about">About</a>
+          </li>
+          <li className="hover:text-[#ff2e63] duration-300 ">
+            <a href="#skills">Skills</a>
+          </li>
+          <li className="hover:text-[#ff2e63] duration-300 ">
+            <a href="#projects">Projects</a>
+          </li>
+          <li className="hover:text-[#ff2e63] duration-300 ">
+            <a href="#contact">Contact</a>
+          </li>
 
           <li className="bg-[#ff2e63] text-white px-4 py-2 rounded-full">
             <a
