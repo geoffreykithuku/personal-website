@@ -30,7 +30,7 @@ const Form = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="flex flex-col gap-5 justify-center md:items-center w-[90%] mx-auto"
+      className="flex flex-col gap-5 justify-center md:items-center w-[90%] mx-auto text-[#2f2e41]"
     >
       <div className="flex flex-col sm:flex-row justify-between w-full items-start text-base gap-5 ">
         <fieldset className="flex flex-col w-full gap-4">
@@ -66,7 +66,7 @@ const Form = () => {
         ></textarea>
       </fieldset>
       <button
-        className="bg-[#ff2e63] text-white px-10 py-3 rounded-2xl text-base font-semibold self-end"
+        className="bg-[#CE5A67] text-[#FCF5ED] px-10 py-3 rounded-2xl text-base font-semibold self-end"
         type="submit"
       >
         Send

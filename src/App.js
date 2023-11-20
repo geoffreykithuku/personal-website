@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1440px] mx-auto bg-[#FCF5ED]">
       <Navbar />
       <div className=" justify-center items-center w-full px-5 sm:px-10 lg:px-[100px]  mx-auto">
         <Home />
