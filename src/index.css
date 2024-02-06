@@ -43,3 +43,18 @@ font-family: 'Poppins', sans-serif;
   width: 300px;
   height: 300px;
 }
+
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+
+.swiper-button-next{
+  margin-left: 50px;
+
+}
+.swiper-button-prev {
+  margin-right: 50px;
+}

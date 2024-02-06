@@ -9,8 +9,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const Projects = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -44,6 +45,7 @@ const Projects = () => {
       </div> */}
 
       <Swiper
+        
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={false}
@@ -55,13 +57,17 @@ const Projects = () => {
           modifier: 1,
           slideShadows: false,
         }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
       >
         {data.map((project) => {
           return (
-            <SwiperSlide key={project.id} className="my-8">
+            <SwiperSlide key={project.id} className="my-12">
               <ProjectCard project={project} />
             </SwiperSlide>
           );
