@@ -2,21 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-.home{
-font-family: 'Work Sans', sans-serif !important
+.home {
+  font-family: "Work Sans", sans-serif !important;
 }
 
-.overview, .contact, .about, .card, nav{
-font-family: 'Poppins', sans-serif !important
+.overview,
+.contact,
+.about,
+.card,
+nav {
+  font-family: "Poppins", sans-serif !important;
 }
 
-
-.about h1, .skills, .projects, .contact-title, .footer{
-font-family: 'Lato', sans-serif !important
+.about h1,
+.skills,
+.projects,
+.contact-title,
+.footer {
+  font-family: "Lato", sans-serif !important;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -29,9 +33,7 @@ font-family: 'Nunito Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
  */
 
-
-
- .swiper {
+.swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -44,17 +46,23 @@ font-family: 'Poppins', sans-serif;
   height: 300px;
 }
 
-
 .swiper-pagination-bullet {
   width: 12px !important;
   height: 12px !important;
 }
 
-
-.swiper-button-next{
+.swiper-button-next {
   margin-left: 50px;
-
 }
 .swiper-button-prev {
   margin-right: 50px;
+}
+
+/* hide swiper buttons on small screens */
+
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
