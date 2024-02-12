@@ -61,7 +61,7 @@ const Navbar = () => {
 
           <li className="bg-[#CE5A67] text-[#FCF5ED] px-4 py-2 rounded-full">
             <a
-              href="https://drive.google.com/file/d/133XfxszAW7dFfirsSlYoYweMiXUyNMnm/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
             >
