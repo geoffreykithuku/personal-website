@@ -2,20 +2,13 @@ import React from "react";
 import Hero from "../assets/Hero.svg";
 import { ArrowDownToLine } from "lucide-react";
 import { useInView } from "react-intersection-observer";
-import Typical from "react-typical";
 
 const Home = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
 
-const jobTitles = [
-  "",
-  1000,
-  "A Fullstack Developer 👨‍💻‍💻",
-  1000,
- 
-];
+
 
 
   return (
@@ -39,7 +32,7 @@ const jobTitles = [
           </span>
         </h2>
         <h2 className="text-center md:text-left flex gap-5">
-           <Typical steps={jobTitles} loop={Infinity} wrapper="p" />
+          A Fullstack Developer 👨‍💻‍💻
         </h2>
         <a
           href="https://drive.google.com/uc?export=download&id=1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv"
@@ -55,7 +48,9 @@ const jobTitles = [
 
       <div
         className={`w-full max-w-[450px] max-h-[450px] h-full flex items-center justify-center ${
-          inView ? "animate__animated animate__fadeInRight animate__delay-2s" : ""
+          inView
+            ? "animate__animated animate__fadeInRight animate__delay-2s"
+            : ""
         }`}
       >
         <img
