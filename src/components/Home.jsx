@@ -1,17 +1,28 @@
 import React from "react";
 import Hero from "../assets/Hero.svg";
 import { ArrowDownToLine } from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 const Home = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true
+  });
+
   return (
     <section
+      ref={ref}
       id="home"
       className="flex flex-col-reverse md:flex-row w-full mt-[60px] justify-between home mx-auto items-center mb-24"
     >
-      <div className="text-[36px] font-bold text-[#2f2e41] flex flex-col w-full mx-auto items-center md:items-start mt-10 md:mt-0 flex-nowrap">
-        <h1 className="animate__animated animate__fadeInLeft animate__delay-1s">
-          Hello!
-        </h1>
+      <div
+        className={`text-[36px] font-bold text-[#2f2e41] flex flex-col w-full mx-auto items-center md:items-start mt-10 md:mt-0 flex-nowrap ${
+          inView
+            ? "animate__animated animate__fadeInLeft animate__delay-1s"
+            : ""
+        }`}
+      >
+        <h1 className={``}>Hello!</h1>
         <h2>
           I'm{" "}
           <span className="text-[#CE5A67] animate__animated animate__fadeInLeft animate__delay-2s">
@@ -31,8 +42,14 @@ const Home = () => {
         </a>
       </div>
 
-      <div className="w-full max-w-[450px] max-h-[450px] h-full flex items-center justify-center">
-        <img src={Hero} alt="Home illustration" className="w-full" />
+      <div
+        className={`w-full max-w-[450px] max-h-[450px] h-full flex items-center justify-center ${
+          inView
+            ? "animate__animated animate__fadeIn animate__delay-2s"
+            : ""
+        }`}
+      >
+        <img src={Hero} alt="Home illustration" className="w-full animated__image" />
       </div>
     </section>
   );
