@@ -1,11 +1,20 @@
 import React from "react";
 import { Plus } from "lucide-react";
+import { useInView } from "react-intersection-observer";
+
 const Overview = () => {
-  // animate when the component is in view
-  
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
+
   return (
     <div className="flex justify-center items-center my-[60px] overview">
-      <div className="grid grid-cols-1 sm:grid-cols-3 mx-auto w-full gap-5 animate__animated animate__fadeInLeft animate__delay-1s">
+      <div
+        ref={ref}
+        className={`grid grid-cols-1 sm:grid-cols-3 mx-auto w-full gap-5 ${
+          inView ? "animate__animated animate__fadeInLeft animate__delay-1s" : ""
+        } `}
+      >
         <div className="flex flex-col justify-center items-center shadow pb-5  ">
           <span className="flex text-[48px] font-semibold text-[#CE5A67] justify-center items-center ">
             <h1>4</h1>

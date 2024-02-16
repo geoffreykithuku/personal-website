@@ -16,6 +16,8 @@ import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 const Projects = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  
+
   // determine slides per view based on screen size. on small screens, show 1 slide, on medium screens, show 2 slides, on large screens, show 3 slides
   useEffect(() => {
     window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
