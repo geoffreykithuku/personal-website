@@ -1,7 +1,7 @@
 import data from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -40,11 +40,7 @@ const Projects = () => {
         <span className="text-[#CE5A67]">My Work</span>
       </h1>
 
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center my-10">
-        {data.map((project) => {
-          return <ProjectCard project={project} key={project.id} />;
-        })}
-      </div> */}
+   
 
       <Swiper
         

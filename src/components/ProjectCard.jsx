@@ -1,7 +1,7 @@
 import React from "react";
 
 const ProjectCard = ({ project }) => {
-  const { id, image, title, description, liveProject, sourceCode } = project;
+  const { image, title, description, liveProject, sourceCode } = project;
 
   return (
     <div
