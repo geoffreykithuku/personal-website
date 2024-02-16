@@ -26,16 +26,16 @@ const projectsData = [
   //   liveProject:
   //     "https://phase-5-project-mental-health-app-frontend.vercel.app/",
   // },
-  {
-    id: 3,
-    image: altcoina,
-    title: "AltCoina",
-    description:
-      "A realtime crypto tracking website. It uses GeckoAPI and React",
-    sourceCode: "https://github.com/geoffreykithuku/altcoina-crypto-website",
-    liveProject:
-      "https://633fe081f939ac0008b8cec6--resonant-croissant-165093.netlify.app/",
-  },
+  // {
+  //   id: 3,
+  //   image: altcoina,
+  //   title: "AltCoina",
+  //   description:
+  //     "A realtime crypto tracking website. It uses GeckoAPI and React",
+  //   sourceCode: "https://github.com/geoffreykithuku/altcoina-crypto-website",
+  //   liveProject:
+  //     "https://633fe081f939ac0008b8cec6--resonant-croissant-165093.netlify.app/",
+  // },
   {
     id: 4,
     image: intoxica,
