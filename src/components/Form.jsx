@@ -7,6 +7,10 @@ const Form = () => {
   const sendEmail = async(e) => {
     e.preventDefault();
 
+    if (!form.current.name.value || !form.current.email.value || !form.current.message.value) {
+      return toast.error("Please fill in all fields");
+    }
+
    await emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
