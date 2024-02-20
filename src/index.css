@@ -51,19 +51,21 @@ font-family: 'Poppins', sans-serif;
   height: 12px !important;
 }
 
-.swiper-button-next,
+.swiper-button-next {
+  margin-left: 50px !important;
+}
 .swiper-button-prev {
-  display: none !important;
+  margin-right: 50px !important;
 }
 
 /* hide swiper buttons on small screens */
 
-/* @media (max-width: 640px) {
+@media (max-width: 640px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
   }
-} */
+}
 
 /* animate the image with animated__image class, such that it zooms in and out repeatedly */
 
