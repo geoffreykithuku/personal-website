@@ -51,39 +51,36 @@ font-family: 'Poppins', sans-serif;
   height: 12px !important;
 }
 
-.swiper-button-next {
-  margin-left: 50px;
-}
+.swiper-button-next,
 .swiper-button-prev {
-  margin-right: 50px;
+  display: none !important;
 }
 
 /* hide swiper buttons on small screens */
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
   }
-}
-
+} */
 
 /* animate the image with animated__image class, such that it zooms in and out repeatedly */
 
 .animated__image {
-  width: 100%; 
+  width: 100%;
   height: auto;
-  animation: zoomInOut 3s infinite alternate; 
+  animation: zoomInOut 3s infinite alternate;
 }
 
 @keyframes zoomInOut {
   0% {
-    transform: scale(1); 
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.1); 
+    transform: scale(1.1);
   }
   100% {
-    transform: scale(1); 
+    transform: scale(1);
   }
 }

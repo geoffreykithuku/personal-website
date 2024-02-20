@@ -44,17 +44,17 @@ const Projects = () => {
 
       <Swiper
         
-        effect={"coverflow"}
+        // effect={"coverflow"}
         grabCursor={true}
         centeredSlides={false}
         slidesPerView={slidesPerView()}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
+        // coverflowEffect={{
+        //   rotate: 20,
+        //   stretch: 0,
+        //   depth: 50,
+        //   modifier: 1,
+        //   slideShadows: false,
+        // }}
         loop={true}
         pagination={{
           clickable: true,
