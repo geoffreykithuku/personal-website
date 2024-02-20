@@ -107,8 +107,8 @@ const projectsData = [
     title: "Furnishco",
     description:
       "Landing page for a furniture store. Built using html, css and bootstrap.",
-    sourceCode: "https://github.com/geoffreykithuku/rails_blog",
-    liveProject: "https://expense-tracker-tewst.vercel.app/",
+    sourceCode: "https://github.com/geoffreykithuku/furnishco",
+    liveProject: "https://furnishco.vercel.app/",
   },
   {
     id: 11,
