@@ -10,6 +10,7 @@ import jokester from './jokester.png';
 import rails_blog from "./rails_blog.png";
 import furnishco from "./furnishco.png";
 import netlify from './netlify.png'
+import cyevents from './cyevents.png'
 const projectsData = [
   {
     id: 1,
@@ -119,6 +120,16 @@ const projectsData = [
     sourceCode: "https://github.com/geoffreykithuku/netlify-clone",
     liveProject: "https://netlify-clone.vercel.app/",
   },
+  {
+    id: 12,
+    image: cyevents,
+    title: "CyEvents",
+    description:
+      "A fullstack event management application. Built using React, TailwindCSS and Firebase",
+    sourceCode: "https://github.com/geoffreykithuku/cy-events",
+    liveProject: "https://cy-events.vercel.app/",
+  }
+
 ];
 
 export default projectsData;
