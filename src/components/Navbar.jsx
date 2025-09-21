@@ -70,7 +70,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://drive.google.com/file/d/1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv/view?usp=sharing"
+              href="https://drive.google.com/file/d/15RBmllg2EHkGYqlnIcyjDZQb0te13tOY/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-medium"
@@ -114,7 +114,7 @@ const Navbar = () => {
             ))}
             <div className="px-4">
               <a
-                href="https://drive.google.com/file/d/1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv/view?usp=sharing"
+                href="https://drive.google.com/file/d/15RBmllg2EHkGYqlnIcyjDZQb0te13tOY/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}

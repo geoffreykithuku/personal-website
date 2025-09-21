@@ -87,7 +87,7 @@ const Home = () => {
               View Success Stories
             </a>
             <a
-              href="https://drive.google.com/uc?export=download&id=1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv"
+              href="https://drive.google.com/uc?export=download&id=15RBmllg2EHkGYqlnIcyjDZQb0te13tOY"
               className="inline-flex items-center justify-center gap-3 text-primary-600 hover:text-primary-700 px-6 py-4 rounded-xl font-semibold transition-all duration-300 border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50"
               download
               aria-label="Download Geoffrey Kithuku's Resume"
