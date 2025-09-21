@@ -1,74 +1,130 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  function checkWindowSize() {
-    const isGreaterThan758px = window.innerWidth > 758;
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
 
-    if (isGreaterThan758px) {
-      setIsMobileMenuOpen(false);
-    } else {
-      return;
-    }
-  }
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
 
-  window.addEventListener("resize", checkWindowSize);
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const navItems = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#experience", label: "Experience" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
 
   return (
     <nav
-      className="flex justify-between items-center flex-wrap md:flex-nowrap w-full h-[100px]  px-5 sm:px-10 lg:px-[100px] py-5"
-      style={{ fontFamily: "Poppins Sans" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-soft"
+          : "bg-transparent"
+      }`}
     >
-      <h1 className="text-[32px] font-bold mr-2 md:mr-10 text-[#2f2e41]">
-        Geoff<span className="text-[#CE5A67]">rey.</span>
-      </h1>
-      <button className="ml-auto md:hidden" onClick={toggleMobileMenu}>
-        {isMobileMenuOpen ? (
-          <X size={32} color="#CE5A67" strokeWidth={3} />
-        ) : (
-          <Menu size={32} color="#CE5A67" strokeWidth={3} />
-        )}
-      </button>
-      <div className="relative w-full mx-auto">
-        <ul
-          className={`${
-            isMobileMenuOpen
-              ? "flex flex-col justify-center items-center absolute  w-full mx-auto gap-3 bg-white py-5 rounded"
-              : "hidden md:flex  gap-4 lg:gap-10 text-xl  md:justify-end items-center ml-auto w-full"
-          } `}
-        >
-          <li className="hover:text-[#CE5A67] duration-300 ">
-            <a href="#home">Home</a>
-          </li>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <a
+            href="#home"
+            className="text-2xl lg:text-3xl font-heading font-bold text-secondary-900 hover:text-primary-600 transition-colors duration-300"
+          >
+            Geoff<span className="text-primary-600">rey.</span>
+          </a>
 
-          <li className="hover:text-[#CE5A67] duration-300 ">
-            <a href="#about">About</a>
-          </li>
-          <li className="hover:text-[#CE5A67] duration-300 ">
-            <a href="#skills">Skills</a>
-          </li>
-          <li className="hover:text-[#CE5A67] duration-300 ">
-            <a href="#projects">Projects</a>
-          </li>
-          <li className="hover:text-[#CE5A67] duration-300 ">
-            <a href="#contact">Contact</a>
-          </li>
-
-          <li className="bg-[#CE5A67] text-[#FCF5ED] px-4 py-2 rounded-full">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-300 relative group"
+              >
+                {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-600 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
             <a
               href="https://drive.google.com/file/d/1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv/view?usp=sharing"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-medium"
             >
               Resume
             </a>
-          </li>
-        </ul>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={toggleMobileMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-secondary-100 transition-colors duration-300"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? (
+              <X size={24} className="text-secondary-700" />
+            ) : (
+              <Menu size={24} className="text-secondary-700" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
+        >
+          <div className="py-4 space-y-4 border-t border-secondary-200 bg-white/95 backdrop-blur-md rounded-b-lg shadow-medium">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-4 py-2 text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-all duration-300 font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="px-4">
+              <a
+                href="https://drive.google.com/file/d/1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-center bg-gradient-to-r from-primary-600 to-primary-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-medium"
+              >
+                Resume
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );

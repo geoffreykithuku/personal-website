@@ -1,25 +1,29 @@
 import Home from "./components/Home";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Overview from "./components/Overview";
 import Skills from "./components/Skills";
 import About from "./components/About";
+import Experience from "./components/Experience";
+import Services from "./components/Services";
 import Projects from "./components/Projects";
+import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="max-w-[1440px] mx-auto bg-[#FCF5ED]">
+    <div className="min-h-screen bg-gradient-to-br from-secondary-50 via-white to-primary-50">
       <Navbar />
-      <div className=" justify-center items-center w-full px-5 sm:px-10 lg:px-[100px]  mx-auto">
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Home />
-        <Overview />
         <About />
+        <Services />
+        <Experience />
         <Skills />
         <Projects />
+        <Testimonials />
         <Contact />
-      </div>
+      </main>
       <Footer />
     </div>
   );

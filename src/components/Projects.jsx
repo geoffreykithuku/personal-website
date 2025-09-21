@@ -1,78 +1,126 @@
 import data from "../data/projects";
 import ProjectCard from "./ProjectCard";
-
 import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 const Projects = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
 
-  
-
-  // determine slides per view based on screen size. on small screens, show 1 slide, on medium screens, show 2 slides, on large screens, show 3 slides
   useEffect(() => {
-    window.addEventListener("resize", () => setWindowWidth(window.innerWidth));
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const slidesPerView = () => {
-    if (windowWidth < 768) {
-      return 1;
-    } else if (windowWidth < 1024) {
-      return 2;
-    } else {
-      return 3;
-    }
+  const getSlidesPerView = () => {
+    if (windowWidth < 768) return 1;
+    if (windowWidth < 1024) return 2;
+    return 3;
   };
 
   return (
-    <div className="w-full my-[100px] projects mx-auto " id="projects">
-      <h1 className="text-[36px] font-bold text-[#2f2e41] flex flex-col w-full mx-auto items-center md:items-start mt-10 md:mt-0">
-        Check Out <br />
-        <span className="text-[#CE5A67]">My Work</span>
-      </h1>
+    <section id="projects" className="py-20">
+      <div ref={ref} className="space-y-12">
+        {/* Section Header */}
+        <div
+          className={`text-center space-y-4 ${
+            inView ? "animate-slide-up" : "opacity-0"
+          }`}
+        >
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-secondary-900">
+            Featured{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600">
+              Projects
+            </span>
+          </h2>
+          <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+            A showcase of my recent work, demonstrating technical skills and
+            creative problem-solving
+          </p>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary-600 to-accent-600 rounded-full mx-auto"></div>
+        </div>
 
-   
+        {/* Projects Carousel */}
+        <div
+          className={`${inView ? "animate-fade-in delay-300" : "opacity-0"}`}
+        >
+          <Swiper
+            grabCursor={true}
+            centeredSlides={false}
+            slidesPerView={getSlidesPerView()}
+            spaceBetween={30}
+            loop={data.length > 3}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            navigation={true}
+            modules={[Navigation, Pagination, Autoplay]}
+            className="pb-12"
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+          >
+            {data.map((project) => (
+              <SwiperSlide key={project.id} className="h-auto">
+                <ProjectCard project={project} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
-      <Swiper
-        
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={false}
-        slidesPerView={slidesPerView()}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
-       
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {data.map((project) => {
-          return (
-            <SwiperSlide key={project.id} className="my-12">
-              <ProjectCard project={project} />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
-    </div>
+        {/* Call to Action */}
+        <div
+          className={`text-center ${
+            inView ? "animate-fade-in delay-600" : "opacity-0"
+          }`}
+        >
+          <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-heading font-semibold text-secondary-900 mb-4">
+              Interested in working together?
+            </h3>
+            <p className="text-secondary-600 mb-6">
+              I'm always open to discussing new opportunities and exciting
+              projects.
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-medium hover:shadow-strong"
+            >
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

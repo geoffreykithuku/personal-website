@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../assets/Hero.svg";
-import { ArrowDownToLine } from "lucide-react";
+import { ArrowDownToLine, Code, Database, Globe } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
 const Home = () => {
@@ -8,56 +8,121 @@ const Home = () => {
     triggerOnce: true,
   });
 
-
-
-
   return (
     <section
       ref={ref}
       id="home"
-      className="flex flex-col-reverse md:flex-row w-full mt-[60px] justify-between home mx-auto items-center mb-24"
+      className="min-h-screen flex flex-col justify-center py-20"
     >
-      <div
-        className={`text-[36px]  text-[#2f2e41] flex flex-col w-full mx-auto items-center md:items-start mt-10 md:mt-0 flex-nowrap ${
-          inView
-            ? "animate__animated animate__fadeInLeft animate__delay-1s"
-            : ""
-        }`}
-      >
-        <h1 className={``}>Hello! 👋</h1>
-        <h2>
-          I'm{" "}
-          <span className="text-[#CE5A67] animate__animated animate__fadeInLeft animate__delay-2s">
-            Geoffrey
-          </span>
-        </h2>
-        <h2 className="text-center md:text-left flex gap-5">
-          A Fullstack Developer 👨‍💻‍💻
-        </h2>
-        <a
-          href="https://drive.google.com/uc?export=download&id=1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv"
-          className="bg-[#CE5A67] text-[#FCF5ED] px-5 py-2 rounded-[50px] mt-8 text-[22px] font-[400] flex items-center gap-4 transition-all duration-300 hover:bg-[#BF4B6B] w-fit"
-          download
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Content Section */}
+        <div
+          className={`space-y-8 ${inView ? "animate-slide-up" : "opacity-0"}`}
         >
-          <span className="flex items-center">
-            <p>Download CV</p>
-            <ArrowDownToLine size={20} color="#fff" />
-          </span>
-        </a>
+          {/* Status Badge */}
+          <div className="inline-flex items-center gap-2 bg-success-100 text-success-800 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="w-2 h-2 bg-success-500 rounded-full animate-pulse"></div>
+            Available for new opportunities
+          </div>
+
+          {/* Main Heading */}
+          <div className="space-y-4">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-heading font-bold text-secondary-900 leading-tight">
+              Experienced{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-600">
+                Full Stack Developer
+              </span>
+            </h1>
+            <h2 className="text-xl lg:text-2xl text-secondary-700 font-medium">
+              & Digital Solutions Consultant
+            </h2>
+            <p className="text-base lg:text-lg text-primary-600 font-medium">
+              Transforming businesses through scalable web applications
+            </p>
+          </div>
+
+          {/* Description */}
+          <p className="text-lg text-secondary-600 leading-relaxed max-w-2xl">
+            With 4+ years of proven expertise in React, Node.js, Python, and
+            Ruby on Rails, I help businesses increase efficiency, drive growth,
+            and deliver exceptional user experiences. From startup MVPs to
+            enterprise solutions, I turn complex challenges into elegant digital
+            solutions.
+          </p>
+
+          {/* Tech Stack Highlights */}
+          <div className="flex flex-wrap gap-3">
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-soft">
+              <Globe className="w-4 h-4 text-primary-600" />
+              <span className="text-sm font-medium text-secondary-700">
+                Frontend
+              </span>
+            </div>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-soft">
+              <Database className="w-4 h-4 text-primary-600" />
+              <span className="text-sm font-medium text-secondary-700">
+                Backend
+              </span>
+            </div>
+            <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-soft">
+              <Code className="w-4 h-4 text-primary-600" />
+              <span className="text-sm font-medium text-secondary-700">
+                Full Stack
+              </span>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-medium hover:shadow-strong"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center gap-3 bg-white hover:bg-secondary-50 text-secondary-800 px-8 py-4 rounded-xl font-semibold transition-all duration-300 border-2 border-secondary-200 hover:border-primary-300"
+            >
+              View Success Stories
+            </a>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1k1YyS-V6_KdoI9kjAOLM2qehvRJP8jzv"
+              className="inline-flex items-center justify-center gap-3 text-primary-600 hover:text-primary-700 px-6 py-4 rounded-xl font-semibold transition-all duration-300 border-2 border-primary-200 hover:border-primary-300 hover:bg-primary-50"
+              download
+              aria-label="Download Geoffrey Kithuku's Resume"
+            >
+              <ArrowDownToLine size={20} />
+              Download Resume
+            </a>
+          </div>
+        </div>
+
+        {/* Hero Image Section */}
+        <div
+          className={`flex justify-center lg:justify-end ${
+            inView ? "animate-fade-in delay-300" : "opacity-0"
+          }`}
+        >
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-full opacity-20 blur-3xl scale-110"></div>
+            <img
+              src={Hero}
+              alt="Geoffrey Kithuku - Full Stack Developer working on innovative software solutions"
+              className="relative w-full max-w-lg h-auto rounded-2xl"
+              loading="eager"
+            />
+          </div>
+        </div>
       </div>
 
-      <div
-        className={`w-full max-w-[450px] max-h-[450px] h-full flex items-center justify-center ${
-          inView
-            ? "animate__animated animate__fadeInRight animate__delay-2s"
-            : ""
-        }`}
-      >
-        <img
-          src={Hero}
-          alt="Geoffrey working on a computer"
-          className="w-full animated__image"
-        />
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block">
+        <div className="animate-bounce-slow">
+          <div className="w-6 h-10 border-2 border-secondary-300 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-secondary-400 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
       </div>
     </section>
   );

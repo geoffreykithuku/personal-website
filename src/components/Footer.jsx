@@ -1,40 +1,206 @@
-import React from 'react'
-import { Linkedin, Twitter, Github } from 'lucide-react'
+import React from "react";
+import {
+  Linkedin,
+  Twitter,
+  Github,
+  Mail,
+  ArrowUp,
+  MessageCircle,
+} from "lucide-react";
 
 const Footer = () => {
-  return (
-    <div className="w-full  bg-[#1F1717] px-5 sm:px-10 lg:px-[100px] justify-between items-center flex flex-col sm:flex-row text-[#FCF5ED] footer py-5">
-      <div className="my-5 sm:my-0">
-        <h1 className="text-[32px] font-bold">Geoffrey.</h1>
-      </div>
-      <div className="flex  items-center text-[24px]  gap-5">
-        <p>Let's Connect:</p>
-        <span className="flex justify-center items-center gap-5">
-          <a
-            href="https://www.linkedin.com/in/geoffrey-kithuku/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Linkedin size={28} color="#FCF5ED" />
-          </a>
-          <a
-            href="https://twitter.com/k__geoffrey"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Twitter size={28} color="#FCF5ED" />
-          </a>
-          <a
-            href="https://github.com/geoffreykithuku"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github size={28} color="#FCF5ED" />
-          </a>
-        </span>
-      </div>
-    </div>
-  );
-}
+  const currentYear = new Date().getFullYear();
 
-export default Footer
+  const socialLinks = [
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/geoffrey-kithuku/",
+      label: "LinkedIn",
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/k__geoffrey",
+      label: "Twitter",
+    },
+    {
+      icon: Github,
+      href: "https://github.com/geoffreykithuku",
+      label: "GitHub",
+    },
+    {
+      icon: Mail,
+      href: "mailto:geoffreykithuku@gmail.com",
+      label: "Email",
+    },
+    {
+      icon: MessageCircle,
+      href: "https://wa.me/254759892639",
+      label: "WhatsApp",
+    },
+  ];
+
+  const quickLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#services", label: "Services" },
+    { href: "#experience", label: "Experience" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
+
+  const services = [
+    { label: "Custom Web Development" },
+    { label: "Digital Transformation" },
+    { label: "Business Automation" },
+    { label: "Technical Training" },
+  ];
+
+  const industries = [
+    { label: "Healthcare & Medical" },
+    { label: "Education & Training" },
+    { label: "E-commerce & Retail" },
+    { label: "Technology Startups" },
+  ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <footer className="bg-secondary-900 text-white relative">
+      {/* Back to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-full shadow-strong hover:shadow-medium transition-all duration-300 hover:-translate-y-1"
+        aria-label="Back to top"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </button>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Brand Section */}
+          <div className="lg:col-span-2 space-y-4">
+            <h2 className="text-3xl font-heading font-bold">
+              Geoff<span className="text-primary-400">rey.</span>
+            </h2>
+            <p className="text-secondary-300 leading-relaxed max-w-md">
+              Full Stack Software Developer passionate about creating
+              exceptional digital experiences and solving complex business
+              problems through innovative technology solutions.
+            </p>
+            <div>
+              <p className="text-sm text-secondary-400 mb-2">
+                Contact Information:
+              </p>
+              <div className="space-y-1 text-sm">
+                <p className="text-secondary-300">
+                  📧{" "}
+                  <a
+                    href="mailto:geoffreykithuku@gmail.com"
+                    className="hover:text-primary-400 transition-colors duration-300"
+                  >
+                    mutembeikithuku12@gmail.com
+                  </a>
+                </p>
+                <p className="text-secondary-300">📱 +254 759 892 639</p>
+                <p className="text-secondary-300">
+                  📍 Nairobi, Kenya (Remote Available)
+                </p>
+              </div>
+            </div>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 bg-secondary-800 hover:bg-primary-600 rounded-lg transition-all duration-300 group"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5 text-secondary-300 group-hover:text-white transition-colors duration-300" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Navigation</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-secondary-300 hover:text-primary-400 transition-colors duration-300 text-sm"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <span className="text-secondary-300 text-sm">
+                    {service.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Industries */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Industries</h3>
+            <ul className="space-y-2">
+              {industries.map((industry, index) => (
+                <li key={index}>
+                  <span className="text-secondary-300 text-sm">
+                    {industry.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-4">
+              <div className="inline-flex items-center gap-2 bg-success-900/30 text-success-300 px-3 py-1 rounded-full text-xs">
+                <div className="w-2 h-2 bg-success-400 rounded-full animate-pulse"></div>
+                Available for new projects
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-secondary-800 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+          <p className="text-secondary-400 text-sm text-center sm:text-left">
+            © {currentYear} Geoffrey Kithuku. All rights reserved.
+          </p>
+          <div className="flex space-x-6 text-sm">
+            <a
+              href="#"
+              className="text-secondary-400 hover:text-primary-400 transition-colors duration-300"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="text-secondary-400 hover:text-primary-400 transition-colors duration-300"
+            >
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
