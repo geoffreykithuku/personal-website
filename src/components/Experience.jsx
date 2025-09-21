@@ -20,7 +20,7 @@ const Experience = () => {
       company: "Molars Dental Hospital",
       location: "Nairobi",
       period: "January 2025 - August 2025",
-      type: "Current Position",
+      type: "Contract",
       challenge:
         "Hospital needed improved online presence and streamlined operations",
       solution: "Comprehensive web optimization and system implementation",
