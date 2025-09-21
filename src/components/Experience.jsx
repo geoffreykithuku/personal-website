@@ -19,7 +19,7 @@ const Experience = () => {
       title: "Web Developer & IT Support Specialist",
       company: "Molars Dental Hospital",
       location: "Nairobi",
-      period: "January 2025 - Present",
+      period: "January 2025 - August 2025",
       type: "Current Position",
       challenge:
         "Hospital needed improved online presence and streamlined operations",
