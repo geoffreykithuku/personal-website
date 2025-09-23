@@ -43,7 +43,7 @@ const Home = () => {
 
           {/* Description */}
           <p className="text-lg text-secondary-600 leading-relaxed max-w-2xl">
-            With 2+ years of proven expertise in React, Node.js, Python, and
+            With 4+ years of proven expertise in React, Node.js, Python, and
             Ruby on Rails, I help businesses increase efficiency, drive growth,
             and deliver exceptional user experiences. From startup MVPs to
             enterprise solutions, I turn complex challenges into elegant digital
