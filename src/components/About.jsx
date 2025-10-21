@@ -11,7 +11,7 @@ const About = () => {
   const highlights = [
     {
       icon: Code2,
-      title: "4+ Years Experience",
+      title: "2+ Years Experience",
       description: "Proven expertise in full-stack development",
     },
     {
@@ -55,7 +55,7 @@ const About = () => {
                 Full Stack Software Developer and Digital Solutions Consultant
               </strong>{" "}
               with a passion for transforming business challenges into
-              innovative digital solutions. Over the past 4 years, I've helped
+              innovative digital solutions. Over the past 2 years, I've helped
               organizations across healthcare, education, and technology sectors
               achieve measurable improvements in efficiency, user engagement,
               and revenue growth.
